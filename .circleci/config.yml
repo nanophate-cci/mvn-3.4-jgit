@@ -9,7 +9,7 @@ jobs:
       - checkout
 
       - run:
-          name: Run Command in Background
+          name: mvn execute
           command: mvn clean install exec:java -Dexec.mainClass="com.mycompany.app.App"
 
 workflows:
