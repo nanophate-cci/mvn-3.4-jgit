@@ -7,7 +7,7 @@ jobs:
 
     steps:
       - checkout
-
+      - run: ssh-keyscan -H github.com >> ~/.ssh/known_hosts
       - run:
           name: mvn execute
           command: mvn clean install exec:java -Dexec.mainClass="com.mycompany.app.App"
